@@ -54,7 +54,7 @@ if (aliases.help.indexOf(command) > -1) {
   taskOperations.help(parameters[0]);
 }
 
-// About taskcmd.
+// About taskcmd
 if (aliases.about.indexOf(command) > -1) {
   taskOperations.about(parameters);
 }
