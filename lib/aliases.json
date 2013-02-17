@@ -1,0 +1,8 @@
+{
+  "list": ["list", "ls", "view", "show"],
+  "add": ["add", "new", "insert", "put", "open"],
+  "remove": ["remove", "rm", "delete", "kill"],
+  "complete": ["complete", "do", "close", "finish", "forget", "giveup"],
+  "help": ["help", "-h", "--help", "howto"],
+  "about": ["author", "creator", "contact"]
+}
