@@ -75,7 +75,7 @@ if (aliases.priority.indexOf(command) > -1) {
 
 // Provide help on how to use taskcmd
 if (aliases.help.indexOf(command) > -1) {
-  taskOperations.help(parameters[0]);
+  taskOperations.help();
 }
 
 // About taskcmd
