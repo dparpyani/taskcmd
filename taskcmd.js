@@ -2,14 +2,21 @@
   taskcmd.js: A simple way to manage tasks in the command line.
 */
 
-// Path to the storage file (global variable).
+/* Global Variables */
+// Path to the storage file
 taskFile = __dirname + '/tasks.json';
+// Version number
+version = '1.0';
 
 var taskOperations = require('./lib/taskOperations');
 var feedback = require('./lib/feedback');
 
 var command = process.argv[2];
 var parameters = process.argv.slice(3);
+
+if (command) {
+  command = command.toLowerCase();
+}
 
 var aliases = require(__dirname + '/lib/aliases.json');
 
@@ -73,12 +80,12 @@ if (aliases.priority.indexOf(command) > -1) {
   }
 }
 
-// Provide help on how to use taskcmd
+// TaskCmd documentation
 if (aliases.help.indexOf(command) > -1) {
-  taskOperations.help();
+  feedback.help();
 }
 
-// About taskcmd
+// About TaskCmd
 if (aliases.about.indexOf(command) > -1) {
-  taskOperations.about(parameters);
+  feedback.about();
 }
