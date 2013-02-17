@@ -16,13 +16,18 @@ var parameters = process.argv.slice(3);
 
 if (command) {
   command = command.toLowerCase();
+} else {
+  command = 'about';
 }
 
+var commandFound = false;
 var aliases = require(__dirname + '/lib/aliases.json');
 
 // List tasks
 // usage: list option [keyword]
 if (aliases.list.indexOf(command) > -1) {
+  commandFound = true;
+  
   if (parameters.length <= 2) {
     taskOperations.list(parameters[0], parameters[1]);
   } else {
@@ -33,6 +38,8 @@ if (aliases.list.indexOf(command) > -1) {
 // Add task
 // usage: add description
 if (aliases.add.indexOf(command) > -1) {
+  commandFound = true;
+  
   if (parameters.length == 1) {
     taskOperations.add(parameters[0]);
   } else {
@@ -43,6 +50,8 @@ if (aliases.add.indexOf(command) > -1) {
 // Complete task
 // usage: complete id [note]
 if (aliases.complete.indexOf(command) > -1) {
+  commandFound = true;
+  
   if (parameters.length <= 2) {
     taskOperations.complete(parameters[0], parameters[1]);
   } else {
@@ -53,6 +62,8 @@ if (aliases.complete.indexOf(command) > -1) {
 // Remove tasks
 // usage: remove option [keyword]
 if (aliases.remove.indexOf(command) > -1) {
+  commandFound = true;
+  
   if (parameters.length <= 2) {
     taskOperations.remove(parameters[0], parameters[1]);
   } else {
@@ -63,6 +74,8 @@ if (aliases.remove.indexOf(command) > -1) {
 // Edit task
 // usage: edit id option value
 if (aliases.edit.indexOf(command) > -1) {
+  commandFound = true;
+  
   if (parameters.length == 3) {
     taskOperations.edit(parameters[0], parameters[1], parameters[2]);
   } else {
@@ -73,6 +86,8 @@ if (aliases.edit.indexOf(command) > -1) {
 // Prioritize task
 // usage: priority id value
 if (aliases.priority.indexOf(command) > -1) {
+  commandFound = true;
+  
   if (parameters.length == 2) {
     taskOperations.edit(parameters[0], '-p', parameters[1]);
   } else {
@@ -82,10 +97,16 @@ if (aliases.priority.indexOf(command) > -1) {
 
 // TaskCmd documentation
 if (aliases.help.indexOf(command) > -1) {
+  commandFound = true;
   feedback.help();
 }
 
 // About TaskCmd
 if (aliases.about.indexOf(command) > -1) {
+  commandFound = true;
   feedback.about();
+}
+
+if (! commandFound) {
+  feedback.error('Command not found.');
 }
