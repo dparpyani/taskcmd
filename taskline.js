@@ -24,15 +24,19 @@ if (aliases.list.indexOf(command) > -1) {
 
 // Add task
 if (aliases.add.indexOf(command) > -1) {
-  taskOperations.add(parameters[0]);
+  if (parameters.length == 1) {
+    taskOperations.add(parameters[0]);
+  } else {
+    feedback.error('Invalid number of arguments provided.');
+  }
 }
 
 // Complete task
 if (aliases.complete.indexOf(command) > -1) {
-  if (parameters.length == 1) {
-    taskOperations.complete(parameters[0]);
+  if (parameters.length <= 2) {
+    taskOperations.complete(parameters[0], parameters[1]);
   } else {
-    feedback.error('Invalid number of arguments.');
+    feedback.error('Invalid number of arguments provided.');
   }
 }
 
