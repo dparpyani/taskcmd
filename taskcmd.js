@@ -1,5 +1,5 @@
 /*
-  taskline.js: A simple way to manage tasks in the command line.
+  taskcmd.js: A simple way to manage tasks in the command line.
 */
 
 // Path to the storage file (global variable).
@@ -49,12 +49,12 @@ if (aliases.remove.indexOf(command) > -1) {
   }
 }
 
-// Provide help on how to use taskline
+// Provide help on how to use taskcmd
 if (aliases.help.indexOf(command) > -1) {
   taskOperations.help(parameters[0]);
 }
 
-// About Taskline.
+// About taskcmd.
 if (aliases.about.indexOf(command) > -1) {
   taskOperations.about(parameters);
 }
