@@ -1,8 +1,10 @@
 {
   "list": ["list", "ls", "view", "show"],
   "add": ["add", "new", "insert", "put", "open"],
-  "remove": ["remove", "rm", "delete", "kill"],
   "complete": ["complete", "do", "close", "finish", "forget", "giveup"],
+  "remove": ["remove", "rm", "delete", "kill"],
+  "edit": ["edit", "modify", "change", "alter", "amend"],
+  "priority": ["priority", "pr", "level"],
   "help": ["help", "-h", "--help", "howto"],
-  "about": ["author", "creator", "contact"]
+  "about": ["about", "author", "creator", "contact"]
 }
