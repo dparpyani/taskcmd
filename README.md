@@ -5,6 +5,7 @@ Add an alias for TaskCmd by opening `~/.bashrc` (create one if it does not exist
 ```bash
 alias task="node /full/path/to/taskcmd.js"
 ```
+Now restart your terminal.
 
 # Usage #
 ## Adding a new task ##
