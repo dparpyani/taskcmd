@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /*
   taskcmd.js: A simple way to manage tasks in the command line.
 */

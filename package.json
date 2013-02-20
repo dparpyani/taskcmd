@@ -3,7 +3,7 @@
   "preferGlobal": "true",
   "version": "1.0.0",
   "description": "Simple task management for the command line.",
-  "main": "taskcmd.js",
+  "main": "./taskcmd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
