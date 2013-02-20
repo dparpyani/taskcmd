@@ -1,0 +1,32 @@
+{
+  "name": "TaskCmd",
+  "preferGlobal": "true",
+  "version": "1.0.0",
+  "description": "Simple task management for the command line.",
+  "main": "taskcmd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+  	"":""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dparpyani/TaskCmd.git"
+  },
+  "keywords": [
+    "task",
+    "management",
+    "cli",
+    "command",
+    "line",
+	"todo",
+	"list"
+  ],
+  "author": "Deepak Parpyani",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "~0.6.0-1",
+    "open": "0.0.3"
+  }
+}

@@ -6,7 +6,7 @@
 // Path to the storage file
 taskFile = __dirname + '/tasks.json';
 // Version number
-version = '1.0';
+version = '1.0.0';
 
 var taskOperations = require('./lib/taskOperations');
 var feedback = require('./lib/feedback');
