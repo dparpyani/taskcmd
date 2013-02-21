@@ -3,12 +3,12 @@
   "preferGlobal": "true",
   "version": "1.0.0",
   "description": "Simple task management for the command line.",
-  "main": "./taskcmd.js",
+  "main": "./bin/taskcmd.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-  	"task":"./taskcmd.js"
+  	"task":"./bin/taskcmd.js"
   },
   "repository": {
     "type": "git",
