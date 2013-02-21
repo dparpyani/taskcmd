@@ -5,10 +5,10 @@
   "description": "Simple task management for the command line.",
   "main": "./bin/taskcmd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-  	"task":"./bin/taskcmd.js"
+	"task":"./bin/taskcmd.js"
   },
   "repository": {
     "type": "git",
