@@ -3,12 +3,12 @@
   "preferGlobal": "true",
   "version": "1.0.0",
   "description": "Simple task management for the command line.",
-  "main": "./bin/taskcmd.js",
+  "main": "bin/taskcmd.js",
   "scripts": {
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-	"task":"./bin/taskcmd.js"
+    "task":"bin/taskcmd.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,8 @@
     "cli",
     "command",
     "line",
-	"todo",
-	"list"
+    "todo",
+    "list"
   ],
   "author": "Deepak Parpyani",
   "license": "MIT",
