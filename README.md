@@ -1,11 +1,11 @@
 Guide to help you get started with TaskCmd.
 
-# Add an alias #
-Add an alias for TaskCmd by opening `~/.bashrc` (create one if it does not exist) and inserting the following line:
+# Installation #
+Install TaskCmd using <a href="https://npmjs.org/">npm</a>:
 ```bash
-alias task="node /full/path/to/taskcmd.js"
+npm install -g git://github.com/dparpyani/TaskCmd.git
 ```
-Now restart your terminal.
+Following installation, TaskCmd can be run by entering `task` in the terminal.
 
 # Usage #
 ## Adding a new task ##
