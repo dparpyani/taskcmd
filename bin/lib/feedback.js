@@ -4,6 +4,7 @@
 
 var colors = require('colors');
 var helpers = require('./helpers');
+var path = require('path');
 
 colors.setTheme({
   priority0: 'grey',
@@ -52,7 +53,8 @@ module.exports.printTask = function (task) {
         'description: ' + task.description + '\n' +
         completionNote +
         'created at: ' + task.createdAt + '\n' +
-        'completed at: ' + task.completedAt + '\n'
+        'completed at: ' + task.completedAt + '\n' +
+        'saved at: ' + path.normalize(taskFile) + '\n'
       ).complete.bold
     );
   } else {
@@ -60,7 +62,8 @@ module.exports.printTask = function (task) {
       ( 'id: ' + task.id + '\t' +
         'priority: ' + helpers.getPriority(task.priority) + '\n' +
         'description: ' + task.description + '\n' +
-        'created at: ' + task.createdAt + '\n'
+        'created at: ' + task.createdAt + '\n' +
+        'saved at: ' + path.normalize(taskFile) + '\n'
       )['priority' + task.priority].bold
     );
   }

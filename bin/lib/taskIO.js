@@ -28,3 +28,13 @@ module.exports.saveTasks = function (tasks) {
     });
   }
 };
+
+// Traverse up the directory tree looking for a .tasks.json file
+module.exports.findTaskFile = function (path) {
+   if (!fs.existsSync(path)) {
+      feedback.error('No task file found. Create one with task init');
+      exit();
+   }
+   else return (fs.existsSync(path + '/' + taskFileName)) ? path :
+     module.exports.findTaskFile(path + '/..');
+};

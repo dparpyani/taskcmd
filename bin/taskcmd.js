@@ -6,12 +6,16 @@
 
 /* Global Variables */
 // Path to the storage file
-taskFile = __dirname + '/tasks.json';
+taskFile = '';
+taskFileName = 'tasks.json';
 // Version number
 version = '1.0.0';
 
+var taskIO = require('./lib/taskIO');
 var taskOperations = require('./lib/taskOperations');
 var feedback = require('./lib/feedback');
+
+taskFile = taskIO.findTaskFile(__dirname) + '/' + taskFileName;
 
 var command = process.argv[2];
 var parameters = process.argv.slice(3);
