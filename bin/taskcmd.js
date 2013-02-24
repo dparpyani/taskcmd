@@ -8,6 +8,7 @@
 // Path to the storage file
 taskFile = '';
 taskFileName = 'tasks.json';
+cwd = process.cwd();
 // Version number
 version = '1.0.0';
 
@@ -15,7 +16,7 @@ var taskIO = require('./lib/taskIO');
 var taskOperations = require('./lib/taskOperations');
 var feedback = require('./lib/feedback');
 
-taskFile = taskIO.findTaskFile(__dirname) + '/' + taskFileName;
+taskFile = taskIO.findTaskFile(cwd) + '/' + taskFileName;
 
 var command = process.argv[2];
 var parameters = process.argv.slice(3);

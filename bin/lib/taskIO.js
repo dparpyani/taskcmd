@@ -8,10 +8,12 @@ var feedback = require('./feedback');
 // Loads the saved tasks.
 module.exports.getTasks = function () {
   var tasks = new Array();
-  
+
   if (fs.existsSync(taskFile)) {
     tasks = require(taskFile);
   } else {
+    feedback.message('Creating task file in the current directory.');
+
     fs.writeFileSync(taskFile, JSON.stringify(tasks, null, 4) , 'utf8', function (err) {
       if (err) { feedback.error(err.message); }
     });
@@ -32,8 +34,8 @@ module.exports.saveTasks = function (tasks) {
 // Traverse up the directory tree looking for a .tasks.json file
 module.exports.findTaskFile = function (path) {
    if (!fs.existsSync(path)) {
-      feedback.error('No task file found. Create one with task init');
-      exit();
+      feedback.message('No task file found.');
+      return cwd;
    }
    else return (fs.existsSync(path + '/' + taskFileName)) ? path :
      module.exports.findTaskFile(path + '/..');
