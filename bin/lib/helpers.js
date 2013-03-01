@@ -29,6 +29,7 @@ module.exports.formatDate = function (date) {
   return dd + '/' + mm + '/' + yyyy + ' ' + hours + ':' + minutes + ' ' + meridiem;
 }
 
+// Gets priority from priority ID.
 module.exports.getPriority = function (priorityId) {
   var priority = '';
   switch (priorityId) {
@@ -46,6 +47,7 @@ module.exports.getPriority = function (priorityId) {
   return priority;
 }
 
+// Gets priority ID from priority string.
 module.exports.getPriorityId = function (priority) {
   var priorityId = 0;
   switch (priority.toLowerCase()) {
@@ -63,6 +65,7 @@ module.exports.getPriorityId = function (priority) {
   return priorityId;
 }
 
+// Filters list of tasks based on provided options.
 module.exports.filterTasks = function (option, keyword, tasks) {
   var filteredTasks = [];
   
