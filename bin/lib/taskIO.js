@@ -11,7 +11,7 @@ module.exports.getTasks = function () {
   var tasks = new Array();
 
   if (fs.existsSync(taskFile)) {
-    tasks = require(taskFile);
+    tasks = JSON.parse(fs.readFileSync(taskFile, 'utf8'));
   } else {
     feedback.message('Creating task file in the current directory.');
 

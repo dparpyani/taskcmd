@@ -18,10 +18,11 @@ task.'
 task add 'My first task.'
 ```
 The current working directory is where your task list will reside. You'll then
-be able to see your tasks in any subdirectory of the current working directory.
+be able to see or edit your tasks in any subdirectory of the current working
+directory.
 
-The tasks are saved in tasks.json, so you can move this file wherever you want
-after you've saved some tasks.
+The tasks are saved in .tasks.json; if you decide to move them after you've
+used `task` for a little while.
 
 ## Viewing tasks ##
 ```bash

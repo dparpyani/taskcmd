@@ -7,7 +7,7 @@
 /* Global Variables */
 // Path to the storage file
 taskFile = '';
-taskFileName = 'tasks.json';
+taskFileName = '.tasks.json';
 cwd = process.cwd();
 // Version number
 version = '1.0.0';
