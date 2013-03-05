@@ -21,8 +21,8 @@ The current working directory is where your task list will reside. You'll then
 be able to see or edit your tasks in any subdirectory of the current working
 directory.
 
-The tasks are saved in .tasks.json; if you decide to move them after you've
-used `task` for a little while.
+If you decide to move the task list after you've used `task`, the tasks are
+saved in .tasks.json.
 
 ## Viewing tasks ##
 ```bash
@@ -34,6 +34,7 @@ id: 1    priority: none
 description: My first task.
 created at: 17/02/2013 3:00 pm
 ```
+
 ###Options###
 | Option | Description |
 |:-----------|:------------|
@@ -44,6 +45,19 @@ created at: 17/02/2013 3:00 pm
 |`-sc keyword` | searches & lists all complete tasks that contain keyword.|
 |`-si keyword` | searches & lists all incomplete tasks that contain keyword.|
 |`-id ID` | lists the task with the given ID.|
+
+## Maintaining multiple task lists ##
+```bash
+task init
+```
+Use this command when you'd like a separate task list for a project, but you 
+already have a task list further up in the directory tree. When you're in the
+current folder or a subdirectory, you'll see the new task list instead of the
+one higher up in the directory tree.
+
+If node.js can't find a task file anywhere up the current path, most commands
+(ls, add, delete, priority, complete) will add a new task file to the current
+directory.
 
 ## Completing a task ##
 ```bash
@@ -62,18 +76,6 @@ the task with id 2, if it exists.
 ```bash
 task remove -id 2
 ```
-
-## Maintaining multiple task lists ##
-```bash
-task init
-```
-Creates a new task list in the current directory. When you're in the current or
-a subdirectory, you'll see the new task list instead of the one higher up in the
-directory tree.
-
-If node.js can't find a task file anywhere in the directory tree, most commands
-(ls, add, delete, priority, complete) will add a new tasks file to the current
-directory.
 
 ###Options###
 | Option | Description |
