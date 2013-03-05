@@ -4,6 +4,7 @@
 
 var fs = require('fs');
 var feedback = require('./feedback');
+var filePath = require('path');
 
 // Loads the saved tasks.
 module.exports.getTasks = function () {
@@ -32,11 +33,11 @@ module.exports.saveTasks = function (tasks) {
 };
 
 // Traverse up the directory tree looking for a .tasks.json file
-module.exports.findTaskFile = function (path) {
-   if (!fs.existsSync(path)) {
+module.exports.findTaskFile = function (path, prev) {
+   if (filePath.join(path) == filePath.join(prev)) {
       feedback.message('No task file found.');
       return cwd;
    }
-   else return (fs.existsSync(path + '/' + taskFileName)) ? path :
-     module.exports.findTaskFile(path + '/..');
+   else return (fs.existsSync(filePath.join(path, taskFileName))) ? path :
+     module.exports.findTaskFile(filePath.join(path, '..'), path);
 };

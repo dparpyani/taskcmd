@@ -15,8 +15,9 @@ version = '1.0.0';
 var taskIO = require('./lib/taskIO');
 var taskOperations = require('./lib/taskOperations');
 var feedback = require('./lib/feedback');
+var path = require('path');
 
-taskFile = taskIO.findTaskFile(cwd) + '/' + taskFileName;
+taskFile = path.join(taskIO.findTaskFile(cwd), taskFileName);
 
 var command = process.argv[2];
 var parameters = process.argv.slice(3);
@@ -28,7 +29,7 @@ if (command) {
 }
 
 var commandFound = false;
-var aliases = require(__dirname + '/lib/aliases.json');
+var aliases = require(path.join(__dirname, 'lib/aliases.json'));
 
 // List tasks
 // usage: list option [keyword]
@@ -112,6 +113,12 @@ if (aliases.help.indexOf(command) > -1) {
 if (aliases.about.indexOf(command) > -1) {
   commandFound = true;
   feedback.about();
+}
+
+// Init a new task list
+if (aliases.init.indexOf(command) > -1) {
+   commandFound = true;
+   taskOperations.newList(".");
 }
 
 if (! commandFound) {

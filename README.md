@@ -12,10 +12,17 @@ Following installation, TaskCmd can be run by entering `task` in the terminal.
 ```bash
 task add description
 ```
-For example, the following will add a new task with the description of 'My first task.'
+For example, the following will add a new task with the description of 'My first
+task.' 
 ```bash
 task add 'My first task.'
 ```
+The current working directory is where your task list will reside. You'll then
+be able to see your tasks in any subdirectory of the current working directory.
+
+The tasks are saved in tasks.json, so you can move this file wherever you want
+after you've saved some tasks.
+
 ## Viewing tasks ##
 ```bash
 task ls [ option ] [ keyword | ID ]
@@ -54,6 +61,19 @@ the task with id 2, if it exists.
 ```bash
 task remove -id 2
 ```
+
+## Maintaining multiple task lists ##
+```bash
+task init
+```
+Creates a new task list in the current directory. When you're in the current or
+a subdirectory, you'll see the new task list instead of the one higher up in the
+directory tree.
+
+If node.js can't find a task file anywhere in the directory tree, most commands
+(ls, add, delete, priority, complete) will add a new tasks file to the current
+directory.
+
 ###Options###
 | Option | Description |
 |:-----------|:------------|

@@ -155,6 +155,15 @@ module.exports.edit = function (id, option, value) {
   feedback.message(message);
 };
 
+// Creates a new task list in the current directory
+module.exports.newList = function (dir) {
+   // Update task file name
+   taskFile = dir + '/' + taskFileName;
+
+   // Simply call taskIO.getTasks() to save the new list
+   taskIO.getTasks();
+};
+
 // Refreshes task IDs so that the max ID is the total number of tasks.
 module.exports.refresh = function() {
   
