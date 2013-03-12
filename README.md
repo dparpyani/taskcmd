@@ -1,7 +1,7 @@
 Guide to help you get started with TaskCmd.
 
 # Installation #
-Install TaskCmd using <a href="https://npmjs.org/">npm</a>:
+You need to have [node](http://nodejs.org/) installed. Then, install TaskCmd using [npm](https://npmjs.org/):
 ```bash
 npm install -g git://github.com/dparpyani/TaskCmd.git
 ```
