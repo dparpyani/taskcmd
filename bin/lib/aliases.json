@@ -6,5 +6,6 @@
   "edit": ["edit", "modify", "change", "alter", "amend"],
   "priority": ["priority", "pr", "level"],
   "help": ["help", "-h", "--help", "howto"],
-  "about": ["about", "author", "creator", "contact"]
+  "about": ["about", "author", "creator", "contact"],
+  "init": ["init"]
 }
