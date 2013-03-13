@@ -12,17 +12,13 @@ Following installation, TaskCmd can be run by entering `task` in the terminal.
 ```bash
 task add description
 ```
-For example, the following will add a new task with the description of 'My first
-task.' 
+For example, the following will add a new task with the description of 'My first task.' 
 ```bash
 task add 'My first task.'
 ```
-The current working directory is where your task list will reside. You'll then
-be able to see or edit your tasks in any subdirectory of the current working
-directory.
-
-If you decide to move the task list after you've used `task`, the tasks are
-saved in .tasks.json.
+The task list (file named `.tasks.json`) will be created in the current working directory. 
+You'll then be able to see or edit your tasks in any subdirectory of the current working directory.
+The `.tasks.json` hidden file can be moved around depending on your needs.
 
 ## Viewing tasks ##
 ```bash
