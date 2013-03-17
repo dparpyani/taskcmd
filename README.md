@@ -126,4 +126,5 @@ Shows info about TaskCmd like `version number`, `author`, etc.
 | `priority` | `pr`, `level` |
 | `help` | `-h`, `--help`, `howto` |
 | `about` | `author`, `creator`, `contact` |
+| `init` | `init` |
 
