@@ -34,6 +34,8 @@ module.exports.saveTasks = function (tasks) {
 
 // Traverse up the directory tree looking for a .tasks.json file
 module.exports.findTaskFile = function (path, prev) {
+   if (prev === undefined)  { prev = ''; }
+
    if (filePath.join(path) == filePath.join(prev)) {
       feedback.message('No task file found.');
       return cwd;
