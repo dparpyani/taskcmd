@@ -12,11 +12,11 @@ Following installation, TaskCmd can be run by entering `task` in the terminal.
 ```bash
 task add description
 ```
-For example, the following will add a new task with the description of 'My first task.' 
+For example, the following will add a new task with the description of 'My first task.'
 ```bash
 task add 'My first task.'
 ```
-The task list (file named `.tasks.json`) will be created in the current working directory. 
+The task list (file named `.tasks.json`) will be created in the current working directory.
 You'll then be able to see or edit your tasks in any subdirectory of the current working directory.
 The `.tasks.json` hidden file can be moved around depending on your needs.
 
@@ -46,7 +46,7 @@ created at: 17/02/2013 3:00 pm
 ```bash
 task init
 ```
-Use this command when you'd like a separate task list for a project, but you 
+Use this command when you'd like a separate task list for a project, but you
 already have a task list further up in the directory tree. When you're in the
 current folder or a subdirectory, you'll see the new task list instead of the
 one higher up in the directory tree.
@@ -94,7 +94,7 @@ Sets the priority of the task with the given ID to status. Status can be 'none',
 ```bash
 task edit id option [value]
 ```
-Updates the task with the given id based on the option and value. 
+Updates the task with the given id based on the option and value.
 
 | Option | Description |
 |:-----------|:------------|

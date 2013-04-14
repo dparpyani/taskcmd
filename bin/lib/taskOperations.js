@@ -102,7 +102,7 @@ module.exports.remove = function (option, keyword) {
 };
 
 // Edits properties of an existing task
-module.exports.edit = function (id, option, value) {  
+module.exports.edit = function (id, option, value) {
   var tasks = taskIO.getTasks();
   var filteredTasks = helpers.filterTasks('-id', id, tasks);
   
