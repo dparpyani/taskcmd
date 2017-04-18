@@ -31,7 +31,7 @@ description: My first task.
 created at: 17/02/2013 3:00 pm
 ```
 
-### Options###
+### Options ###
 | Option | Description |
 |:-----------|:------------|
 |`-a` | lists all tasks.|
@@ -73,7 +73,7 @@ the task with id 2, if it exists.
 task remove -id 2
 ```
 
-### Options###
+### Options ###
 | Option | Description |
 |:-----------|:------------|
 |`-a` | removes all tasks.|
