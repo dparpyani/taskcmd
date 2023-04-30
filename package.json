@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "task":"bin/taskcmd.js"
+    "task": "bin/taskcmd.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   "author": "Deepak Parpyani",
   "license": "MIT",
   "dependencies": {
-    "colors": "~0.6.0-1",
-    "open": "0.0.3"
+    "colors": "~1.4.0",
+    "open": "~8.4.2"
   }
 }
