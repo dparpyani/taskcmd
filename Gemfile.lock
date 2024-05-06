@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    taskcmd (1.0.0)
+    taskcmd (1.0.1)
       msgpack (~> 1.7.2)
       thor (~> 1.3.1)
 
