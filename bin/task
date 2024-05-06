@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'taskcmd'
+
+begin
+  Taskcmd::CLI::Main.start
+rescue Taskcmd::Error => err
+  $stderr.puts "error: #{err.message}"
+end

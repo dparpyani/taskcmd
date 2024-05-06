@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.version       = Taskcmd::VERSION
   spec.authors       = ['Deepak Parpyani']
   spec.summary       = 'Simple todo list manager for the command line'
-  spec.homepage      = 'https://github.com/dparpyani/TaskCmd'
+  spec.homepage      = 'https://github.com/dparpyani/taskcmd'
   spec.license       = 'MIT'
 
   spec.required_ruby_version = Gem::Requirement.new('>= 3.3.1')
@@ -26,4 +26,5 @@ Gem::Specification.new do |spec|
 
   # Dependencies
   spec.add_dependency 'msgpack', '~> 1.7.2'
+  spec.add_dependency 'thor', '~> 1.3.1'
 end

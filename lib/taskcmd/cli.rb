@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'taskcmd/cli/main'
+
 module Taskcmd
-  VERSION = '1.0.0'
+  module CLI
+  end
 end
