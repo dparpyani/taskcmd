@@ -4,7 +4,7 @@ A todo list manager for the command line.
 
 ## Installation
 
-You will need to have a Ruby environment installed, then run:
+You will need to have a Ruby (version `>= 3.3.1`) environment installed, then run:
 
 ```bash
 gem install taskcmd
@@ -12,6 +12,9 @@ gem install taskcmd
 
 This should also install any dependencies, such as [msgpack](https://msgpack.org),
 which taskcmd uses as its serialization format.
+
+Note that some older versions of Ruby may raise `Gem::FilePermissionError` when attempting to
+install the gem, so update your Ruby to the version mentioned above before trying again.
 
 ## Usage
 
